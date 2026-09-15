@@ -1,0 +1,12 @@
+{
+  "name": "concepto",
+  "private": true,
+  "workspaces": [
+    "learning-objective-extractor/frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=loe-frontend",
+    "build": "npm run build --workspace=loe-frontend",
+    "preview": "npm run preview --workspace=loe-frontend"
+  }
+}
