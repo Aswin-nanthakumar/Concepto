@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --bg2: #f8fafc;
+  --primary: #2563eb;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  @apply bg-white text-ink font-sans antialiased;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+::selection { background: #dbeafe; }
+
+/* Slim scrollbars */
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+*::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+@layer components {
+  .card {
+    @apply bg-white border border-border rounded-2xl shadow-card;
+  }
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-lift hover:-translate-y-0.5;
+  }
+  .input {
+    @apply w-full rounded-xl border border-border bg-white px-3.5 py-2.5 text-sm text-ink
+      placeholder:text-slate-400 outline-none transition
+      focus:border-primary focus:ring-2 focus:ring-primary/20;
+  }
+  .label {
+    @apply block text-[13px] font-semibold text-ink mb-1.5;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5
+      text-sm font-semibold text-white transition hover:bg-primary-700
+      active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none shadow-lift;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-white
+      px-4 py-2.5 text-sm font-semibold text-ink transition hover:bg-secondarybg
+      active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-3 py-2 text-sm font-medium
+      text-muted transition hover:bg-secondarybg hover:text-ink;
+  }
+  .section-title { @apply text-lg font-bold text-ink tracking-tight; }
+  .section-sub { @apply text-sm text-muted mt-0.5; }
+  .stat-card { @apply card card-hover p-5 flex flex-col gap-1 min-h-[132px]; }
+  .table-head { @apply text-left text-xs font-semibold uppercase tracking-wider text-muted px-4 py-3; }
+  .table-cell { @apply px-4 py-3 text-sm; }
+  .tab-btn {
+    @apply px-4 py-2 rounded-xl text-sm font-semibold transition whitespace-nowrap;
+  }
+}

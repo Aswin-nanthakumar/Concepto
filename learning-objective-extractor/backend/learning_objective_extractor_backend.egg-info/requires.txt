@@ -1,0 +1,12 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+pydantic>=2.10.0
+pydantic-settings>=2.7.0
+python-multipart>=0.0.20
+PyMuPDF>=1.24.10
+python-docx>=1.1.2
+google-generativeai>=0.8.4
+SQLAlchemy>=2.0.36
+fpdf2>=2.8.2
+python-dotenv>=1.0.1
+httpx>=0.28.1

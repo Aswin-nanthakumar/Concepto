@@ -1,0 +1,12 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/learning-objective-extractor/backend/.venv/Scripts/python.exe",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/learning-objective-extractor/backend"
+  ],
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}/learning-objective-extractor/backend"
+  ],
+  "terminal.integrated.env.windows": {
+    "PYTHONPATH": "${workspaceFolder}/learning-objective-extractor/backend"
+  }
+}

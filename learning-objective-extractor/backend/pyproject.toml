@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "learning-objective-extractor-backend"
+version = "1.0.0"
+description = "Learning Objective Extractor FastAPI Backend"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.34.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.7.0",
+    "python-multipart>=0.0.20",
+    "PyMuPDF>=1.24.10",
+    "python-docx>=1.1.2",
+    "google-generativeai>=0.8.4",
+    "SQLAlchemy>=2.0.36",
+    "fpdf2>=2.8.2",
+    "python-dotenv>=1.0.1",
+    "httpx>=0.28.1"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
