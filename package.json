@@ -2,7 +2,7 @@
   "name": "concepto",
   "private": true,
   "workspaces": [
-    "learning-objective-extractor/frontend"
+    "frontend"
   ],
   "scripts": {
     "dev": "npm run dev --workspace=loe-frontend",

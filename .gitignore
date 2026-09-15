@@ -37,3 +37,7 @@ node_modules/
 dist/
 .npm
 .eslintcache
+
+# Deprecated nested directory
+learning-objective-extractor/
+

@@ -2,12 +2,12 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Install dependencies
-COPY learning-objective-extractor/backend/requirements.txt requirements.txt
+COPY backend/requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy source code and entrypoints
-COPY learning-objective-extractor/backend/app ./app
-COPY learning-objective-extractor/backend/main.py .
+COPY backend/app ./app
+COPY backend/main.py .
 
 ENV PORT=8000
 EXPOSE 8000

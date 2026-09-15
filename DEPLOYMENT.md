@@ -17,7 +17,7 @@ Both services can be deployed either together via Docker or separately (Render f
 3. Connect your GitHub repository (`Concepto`).
 4. Configure the settings:
    - **Name**: `concepto-backend` (or your choice)
-   - **Root Directory**: `learning-objective-extractor/backend`
+   - **Root Directory**: `backend`
    - **Environment**: `Python 3`
    - **Region**: Choose closest to you
    - **Branch**: `main`
@@ -30,7 +30,7 @@ Both services can be deployed either together via Docker or separately (Render f
    - `ENV`: `production`
 6. *(Optional)* Add a Persistent Disk under **Disks**:
    - **Name**: `loe-data`
-   - **Mount Path**: `/opt/render/project/src/learning-objective-extractor/backend/storage`
+   - **Mount Path**: `/opt/render/project/src/backend/storage`
    - **Size**: `1 GB`
 7. Click **Create Web Service**.
 8. Once deployed, copy your backend URL (e.g., `https://concepto-backend.onrender.com`).
@@ -43,9 +43,9 @@ Both services can be deployed either together via Docker or separately (Render f
 2. Click **Add New...** → **Project** and import the `Concepto` repository.
 3. In the project setup screen:
    - **Framework Preset**: `Vite`
-   - **Root Directory**: Click *Edit* and select `learning-objective-extractor/frontend`
+   - **Root Directory**: Select `frontend` (or leave default root `./` — root `package.json` workspace is configured!)
    - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
+   - **Output Directory**: `frontend/dist` (or `dist` if root directory set to `frontend`)
 4. Under **Environment Variables**, add:
    - `VITE_API_URL`: `https://<your-backend-name>.onrender.com` *(Use the Render URL from Step 1, without trailing slash)*
 5. Click **Deploy**.
@@ -68,7 +68,7 @@ Both backend service and persistent disk are configured in [`render.yaml`](rende
 
 Dockerfiles are provided at:
 - Root: [`Dockerfile`](Dockerfile)
-- Backend: [`learning-objective-extractor/backend/Dockerfile`](learning-objective-extractor/backend/Dockerfile)
+- Backend: [`backend/Dockerfile`](backend/Dockerfile)
 
 To build and run locally or on any container platform (Railway, Fly.io, Cloud Run):
 
