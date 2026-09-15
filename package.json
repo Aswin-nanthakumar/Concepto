@@ -5,7 +5,10 @@
     "frontend"
   ],
   "scripts": {
-    "dev": "npm run dev --workspace=loe-frontend",
+    "dev": "node run.js",
+    "start": "node run.js",
+    "backend": "node -e \"const p = process.platform === 'win32' ? 'backend/.venv/Scripts/uvicorn' : 'backend/.venv/bin/uvicorn'; require('child_process').spawn(p, ['app.main:app', '--reload', '--port', '8000'], {cwd: 'backend', stdio: 'inherit', env: {...process.env, PYTHONPATH: '.'}});\"",
+    "frontend": "npm run dev --workspace=loe-frontend",
     "build": "npm run build --workspace=loe-frontend",
     "preview": "npm run preview --workspace=loe-frontend"
   }

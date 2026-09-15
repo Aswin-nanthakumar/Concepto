@@ -19,6 +19,8 @@ services:
         value: gemini-2.5-flash
       - key: CORS_ORIGINS
         value: "*"
+      - key: PYTHONPATH
+        value: ".:..:../ai"
     disk:
       name: loe-data
       mountPath: /opt/render/project/src/backend/storage
